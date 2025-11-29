@@ -44,3 +44,10 @@ class Library:
         available_books = [book.get_summary() for book in self.books if not book._isChecked_out]
         for summary in available_books:
             print(summary)
+
+    def return_book(self, title):
+        for book in self.books:
+            if book.title == title:
+                book._isChecked_out = False
+                return f"'{title}' has been returned."
+        return f"'{title}' not found in the library."

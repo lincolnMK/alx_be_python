@@ -22,26 +22,26 @@ class Book:
 
 class Library:
     def __init__(self):
-        self.books = []
+        self._books = []
 
     def add_book(self, book):
-        self.books.append(book)
+        self._books.append(book)
 
     def list_available_books(self):
-        for book in self.books:
+        for book in self._books:
             if not book._isChecked_out:
                 print(f"{book.title} by {book.author}")
+                
     def check_out_book(self, title):
-        for book in self.books:
+        for book in self._books:
             if book.title == title:
                 book.check_out_book()
                 return
         print(f"Book '{title}' not found in the library.")
 
     def return_book(self, title):
-        for book in self.books:
+        for book in self._books:
             if book.title == title:
                 book.return_book()
                 return
         print(f"Book '{title}' not found in the library.")
-        

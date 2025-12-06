@@ -4,7 +4,7 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return f"'{self.title}' by '{self.author}'"
+        return f"'{self.title}' by {self.author}"
 
     
 class EBook(Book):
@@ -22,8 +22,8 @@ class PrintBook(Book):
     
 
 class Library:
-    def __init__(self, books=[]):
-        self.books = books
+    def __init__(self):
+        self.books = []
     
     def add_book(self, book):
         self.books.append(book)

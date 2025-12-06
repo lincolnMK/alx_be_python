@@ -4,7 +4,7 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return f"'{self.title}' by {self.author}"
+        return f"{self.title} by {self.author}"
 
     
 class EBook(Book):
@@ -31,9 +31,9 @@ class Library:
     def list_books(self):
         for book in self.books:
             if isinstance(book, Book) and not isinstance(book, (EBook, PrintBook)):
-                print(f"Book: '{book.title}' by {book.author}")
+                print(f"Book: {book}")
             if isinstance(book, EBook):
-                print(f"EBook: '{book.title}' by {book.author}, File Size: {book.file_size}KB")
+                print(f"EBook: {book}, File Size: {book.file_size}KB")
             if isinstance(book, PrintBook):
-                print(f"Print Book: '{book.title}' by {book.author}, Page Count: {book.page_count}")
+                print(f"Print Book: {book}, Page Count: {book.page_count}")
             

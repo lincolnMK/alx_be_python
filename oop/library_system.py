@@ -35,5 +35,5 @@ class Library:
             if isinstance(book, EBook):
                 print(f"EBook: {book}, File Size: {book.file_size}KB")
             if isinstance(book, PrintBook):
-                print(f"Print Book: {book}, Page Count: {book.page_count}")
+                print(f"PrintBook: {book}, Page Count: {book.page_count}")
             
